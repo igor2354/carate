@@ -59,15 +59,28 @@
     }
 
     &__sign {
+        margin-bottom: 15px;
     }
 
     &__social {
     }
 
-    &__social-list {
+    &__list-social {
+        display: flex;
     }
 
-    &__social-item {
+    &__item-social {
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+        & a {
+            display: block;
+            transition: all 0.3s ease;
+            &:hover {
+                transform: translate(0, -5px);
+            }
+        }
     }
 }
 

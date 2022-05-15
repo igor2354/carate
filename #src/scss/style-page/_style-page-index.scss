@@ -152,6 +152,7 @@
 		max-width: 1170px;
 		margin: 0 auto 70px auto;
 		font-size: 22px;
+		line-height: 120%;
 		text-align: center;
 		color: #333;
 	}
@@ -280,7 +281,7 @@
 
 
 .reviews {
-
+	display: none;
 	&__wrap {
 		padding: 80px 0;
 	}

@@ -483,6 +483,7 @@ h2 {
   max-width: 1170px;
   margin: 0 auto 70px auto;
   font-size: 22px;
+  line-height: 120%;
   text-align: center;
   color: #333; }
 
@@ -574,25 +575,24 @@ h2 {
   font-size: 18px;
   line-height: 120%; }
 
-.reviews__wrap {
-  padding: 80px 0; }
-
-.reviews__title {
-  text-align: center;
-  margin-bottom: 15px;
-  color: #333; }
-
-.reviews__subtitle {
-  font-size: 22px;
-  line-height: 120%;
-  text-align: center;
-  color: #333;
-  margin-bottom: 50px; }
-
-.reviews__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px; }
+.reviews {
+  display: none; }
+  .reviews__wrap {
+    padding: 80px 0; }
+  .reviews__title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333; }
+  .reviews__subtitle {
+    font-size: 22px;
+    line-height: 120%;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px; }
+  .reviews__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px; }
 
 .card-reviews__image {
   margin-bottom: 20px; }
@@ -720,3 +720,22 @@ h2 {
         width: 24px;
         height: 24px;
         background: url("../img/phone-call.png") no-repeat center/contain; }
+  .footer__sign {
+    margin-bottom: 15px; }
+  .footer__list-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer__item-social {
+    margin-right: 20px; }
+    .footer__item-social:last-child {
+      margin-right: 0; }
+    .footer__item-social a {
+      display: block;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .footer__item-social a:hover {
+        -webkit-transform: translate(0, -5px);
+            -ms-transform: translate(0, -5px);
+                transform: translate(0, -5px); }
