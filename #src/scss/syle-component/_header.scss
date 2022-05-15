@@ -1,0 +1,44 @@
+.header {
+	background: #212121;
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px 0;
+	}
+
+	&__logo {
+		& img {
+			max-width: 200px;
+		}
+	}
+
+	&__group {
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu {
+		margin-right: 30px;
+	}
+
+	&__phone {
+		& a {
+			position: relative;
+			display: inline-block;
+			padding-left: 35px;
+			font-size: 20px;
+			color: #fff;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+				width: 24px;
+				height: 24px;
+				background: url("../img/phone-call.png") no-repeat center / contain;
+			}
+		}
+	}
+}

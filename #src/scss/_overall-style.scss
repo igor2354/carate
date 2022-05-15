@@ -1,0 +1,145 @@
+body {
+	font-family: "Dihjauti";
+	font-size: 16px;
+	line-height: 120%;
+	font-weight: 700;
+	color: #fff;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.title-h1,
+h1 {
+	font-size: 54px;
+	line-height: 120%;
+	font-style: italic;
+}
+
+.title-h2,
+h2 {
+	font-size: 42px;
+	line-height: 120%;
+	font-style: italic;
+
+	& span {
+		position: relative;
+		padding: 0 40px;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 40%;
+			transform: translate(0, -50%);
+			width: 40px;
+			height: 3px;
+			background: #006699;
+		}
+
+		&::before {
+			left: -10px;
+		}
+
+		&::after {
+			right: -10px;
+		}
+	}
+}
+
+.main-btn {
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 20px;
+	background-color: #fff;
+	color: #333;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease 0s;
+	&:hover {
+		color: #fff;
+		background: #006699;
+		transform: translateY(-7px);
+	}
+}
+
+.text-block {
+	& p {
+		font-size: 18px;
+		line-height: 120%;
+		margin-bottom: 20px;
+	}
+}
+
+.wrap-input {
+	& input {
+		width: 100%;
+		padding: 10px 15px 10px 0;
+		font-size: 18px;
+		line-height: 120%;
+		border-bottom: 1px solid #cccccc;
+	}
+}
+
+.wrap-check {
+	display: flex;
+	align-items: center;
+	&__input {
+		display: none;
+		&:checked + .wrap-check__checkmark::before {
+			opacity: 1;
+		}
+	}
+
+	&__checkmark {
+		position: relative;
+		margin-right: 15px;
+		width: 20px;
+		height: 20px;
+		border: 2px solid #006699;
+		transform: translate(0, -2px);
+		&::before {
+			opacity: 0;
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -65%) rotate(45deg);
+			width: 5px;
+			height: 9px;
+			border: solid #006699;
+			border-width: 0 2px 2px 0;
+			transition: all 0.3s ease;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 120%;
+		color: #000;
+		& a {
+			color: #006699;
+			border-bottom: 1px solid #006699;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+}
