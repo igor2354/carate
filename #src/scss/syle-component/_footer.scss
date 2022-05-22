@@ -34,6 +34,10 @@
         & a {
             color: #fff;
             border-bottom: 1px solid #fff;
+            transition: all 0.3s ease;
+            &:hover {
+                border-color: transparent;
+            }
         }
     }
 
@@ -43,6 +47,7 @@
 			position: relative;
 			display: inline-block;
 			padding-left: 35px;
+            white-space: nowrap;
 			font-size: 20px;
 			color: #fff;
 			&::before {
@@ -54,6 +59,13 @@
 				width: 24px;
 				height: 24px;
 				background: url("../img/phone-call.png") no-repeat center / contain;
+			}
+            & span {
+				border-bottom: 1px solid transparent;
+				transition: all 0.3s ease;
+				&:hover {
+					border-color: #fff;
+				}
 			}
 		}
     }
@@ -84,3 +96,69 @@
     }
 }
 
+@media (max-width: 1170px) {
+    .footer {
+        &__logo {
+            & img {
+                max-width: 150px;
+            }
+        }
+
+        &__column {
+            &:nth-child(1) {
+                margin-right: 50px;
+            }
+            &:nth-child(2) {
+                margin-right: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__row {
+            flex-wrap: wrap;
+        }
+
+        &__column {
+            &:nth-child(1) {
+                margin-right: 0px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            &:nth-child(2) {
+                margin-right: 20px;
+                width: calc(60% - 20px);
+            }
+
+            &:nth-child(3) {
+                margin-right: 0px;
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        &__column {
+            &:nth-child(2) {
+                margin-right: 0px;
+                margin-bottom: 40px;
+                width: 100%;
+                text-align: center;
+            }
+
+            &:nth-child(3) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &__list-social {
+            justify-content: center;
+        }
+    }
+}

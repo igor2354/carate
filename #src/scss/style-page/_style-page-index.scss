@@ -30,12 +30,15 @@
 	&__title {
 		text-align: center;
 		margin-bottom: 50px;
+		& span {
+			justify-content: center;
+		}
 	}
 
 	&__text {
 		max-width: 600px;
 		margin: 0 auto 50px auto;
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 120%;
 		text-align: center;
 	}
@@ -53,6 +56,27 @@
 	}
 
 	&__subtext {
+	}
+}
+
+@media (max-width: 1170px) {
+	.main-screen {
+		&__wrap {
+			padding: 80px 0 50px 0;
+		}
+
+		&__title {
+			margin-bottom: 30px;
+		}
+
+		&__subtitle {
+			font-size: 18px;
+		}
+
+		&__text {
+			font-size: 14px;
+			margin: 0 auto 30px auto;
+		}
 	}
 }
 
@@ -83,6 +107,25 @@
 	}
 }
 
+.info-school {
+	&__wrap {
+		padding: 40px 0;
+	}
+}
+
+@media (max-width: 900px) {
+	.info-school {
+		&__row {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}
+
 .advantages {
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%);
 
@@ -93,10 +136,13 @@
 	&__title {
 		text-align: center;
 		margin-bottom: 10px;
+		& span {
+			justify-content: center;
+		}
 	}
 
 	&__subtitle {
-		font-size: 18px;
+		font-size: 16px;
 		text-align: center;
 		margin-bottom: 70px;
 	}
@@ -109,6 +155,9 @@
 
 	&__item {
 		max-width: 300px;
+		&:nth-child(2) {
+			margin: 0 30px;
+		}
 	}
 }
 
@@ -126,7 +175,7 @@
 	}
 
 	&__name {
-		font-size: 22px;
+		font-size: 20px;
 		text-align: center;
 		margin-bottom: 15px;
 	}
@@ -134,6 +183,69 @@
 	&__text {
 		font-size: 16px;
 		text-align: center;
+	}
+}
+
+@media (max-width: 1170px) {
+	.advantages {
+		&__wrap {
+			padding: 40px 0;
+		}
+
+		&__subtitle {
+			font-size: 14px;
+			margin-bottom: 50px;
+		}
+	}
+
+	.card-advantages {
+		&__name {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+	
+		&__text {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.advantages {
+		&__subtitle {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.advantages {
+		&__list {
+			flex-direction: column;
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin: 0 0 40px 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.card-advantages {
+		&__icon {
+			width: 100px;
+			height: 100px;
+		}
+
+		&__name {
+			font-size: 14px;
+		}
+	
+		&__text {
+			font-size: 12px;
+		}
 	}
 }
 
@@ -146,12 +258,15 @@
 		text-align: center;
 		color: #333;
 		margin-bottom: 50px;
+		& span {
+			justify-content: center;
+		}
 	}
 
 	&__text {
 		max-width: 1170px;
 		margin: 0 auto 70px auto;
-		font-size: 22px;
+		font-size: 18px;
 		line-height: 120%;
 		text-align: center;
 		color: #333;
@@ -168,6 +283,37 @@
 	}
 }
 
+@media (max-width: 1170px) {
+	.mission {
+		&__wrap {
+			padding: 40px 0;
+		}
+
+		&__text {
+			font-size: 16px;
+			margin: 0 auto 40px auto;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.mission {
+		&__title {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.mission {
+		&__video {
+			& iframe {
+				height: 300px;
+			}
+		}
+	}
+}
+
 .special {
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%);
 
@@ -179,16 +325,37 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin: 0 -20px -40px -20px;
 	}
 
 	&__item {
 		max-width: 250px;
+		margin: 0 20px 40px 20px;
 	}
 }
 
+@media (max-width: 1170px) {
+	.special {
+		&__wrap {
+			padding: 40px 0;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.special {
+		&__list {
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			max-width: 100%;
+			width: calc(50% - 40px);
+		}
+	}
+}
 
 .coach {
-
 	&__wrap {
 		padding: 80px 0;
 	}
@@ -197,13 +364,16 @@
 		margin-bottom: 15px;
 		text-align: center;
 		color: #333;
+		& span {
+			justify-content: center;
+		}
 	}
 
 	&__subtitle {
 		margin-bottom: 50px;
 		text-align: center;
 		color: #333;
-		font-size: 22px;
+		font-size: 18px;
 	}
 
 	&__row {
@@ -227,7 +397,37 @@
 	&__text {
 		color: #333;
 		& p {
-			font-size: 20px;
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.coach {
+		&__wrap {
+			padding: 40px 0;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
+
+		&__text {
+			& p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.coach {
+		&__row {
+			gap: 30px;
+		}
+
+		&__subtitle {
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -242,10 +442,13 @@
 	&__title {
 		text-align: center;
 		margin-bottom: 15px;
+		& span {
+			justify-content: center;
+		}
 	}
 
 	&__subtitle {
-		font-size: 22px;
+		font-size: 18px;
 		text-align: center;
 		margin-bottom: 50px;
 	}
@@ -269,16 +472,77 @@
 	&__name {
 		padding-bottom: 10px;
 		margin-bottom: 20px;
-		font-size: 24px;
+		font-size: 20px;
 		border-bottom: 1px solid #fff;
 	}
 
 	&__text {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 120%;
 	}
 }
 
+@media (max-width: 1170px) {
+	.training {
+		&__wrap {
+			padding: 40px 0
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
+
+		&__list {
+			gap: 20px;
+		}
+	}
+
+	.card-training {
+		&__name {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+
+		&__text {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.training {
+		&__subtitle {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.training {
+		&__list {
+			column-gap: 10px;
+			row-gap: 30px;
+		}
+	}
+
+	.card-training {
+		&__image {
+			margin-bottom: 10px;
+		}
+
+		&__name {
+			font-size: 14px;
+		}
+
+		&__text {
+			font-size: 12px;
+		}
+	}
+}
 
 .reviews {
 	display: none;
@@ -290,10 +554,13 @@
 		text-align: center;
 		margin-bottom: 15px;
 		color: #333;
+		& span {
+			justify-content: center;
+		}
 	}
 
 	&__subtitle {
-		font-size: 22px;
+		font-size: 18px;
 		line-height: 120%;
 		text-align: center;
 		color: #333;
@@ -319,18 +586,78 @@
 	&__name {
 		padding-bottom: 10px;
 		margin-bottom: 20px;
-		font-size: 24px;
+		font-size: 18px;
 		border-bottom: 1px solid #333;
 		color: #333;
 	}
 
 	&__text {
-		font-size: 18px;
+		font-size: 16px;
 		color: #333;
 		line-height: 120%;
 	}
 }
 
+@media (max-width: 1170px) {
+	.reviews {
+		&__wrap {
+			padding: 40px 0
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
+
+		&__list {
+			gap: 20px;
+		}
+	}
+
+	.card-reviews  {
+		&__name {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+
+		&__text {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.reviews {
+		&__subtitle {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.reviews {
+		&__list {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.card-reviews {
+		&__image {
+			margin-bottom: 10px;
+		}
+
+		&__name {
+			font-size: 14px;
+		}
+
+		&__text {
+			font-size: 12px;
+		}
+	}
+}
 
 .order {
 	background: url("../img/image-bg-main-screen.jpg") no-repeat center / cover;
@@ -381,6 +708,34 @@
 	}
 }
 
+@media (max-width: 1170px) {
+	.order {
+		&__wrap {
+			padding: 40px 0;
+		}
+	}
+
+	.from-order {
+		&__subtitle {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.from-order {
+		padding: 15px;
+	}
+}
+
+@media (max-width: 500px) {
+	.from-order {
+		&__subtitle {
+			font-size: 14px;
+		}
+	}
+}
+
 .map {
 	position: relative;
 	height: 600px;
@@ -398,15 +753,17 @@
 	}
 
 	&__wrap {
-		position: relative;
-		height: 100%;
-	}
-
-	&__block {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		max-width: 400px;
+		transform: translate(-50%, 0);
+		width: 100%;
+		max-width: 430px;
+		padding: 0 15px;
+	}
+
+	&__block {
+
 		padding: 30px;
 		background: rgba(255,255,255,.8);
 		overflow: hidden;
@@ -429,5 +786,34 @@
 		font-size: 16px;
 		color: #333;
 		line-height: 120%;
+		& a {
+			color: #333;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: #333;
+			}
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.map {
+		height: 400px;
+		&__block {
+			padding: 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.map {
+		&__text {
+			font-size: 14px;
+		}
+
+		&__adress {
+			font-size: 14px;
+		}
 	}
 }

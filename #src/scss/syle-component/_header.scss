@@ -1,4 +1,9 @@
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
 	background: #212121;
 	&__wrap {
 		display: flex;
@@ -27,7 +32,7 @@
 			position: relative;
 			display: inline-block;
 			padding-left: 35px;
-			font-size: 20px;
+			font-size: 16px;
 			color: #fff;
 			&::before {
 				content: "";
@@ -39,6 +44,170 @@
 				height: 24px;
 				background: url("../img/phone-call.png") no-repeat center / contain;
 			}
+			& span {
+				border-bottom: 1px solid transparent;
+				transition: all 0.3s ease;
+				&:hover {
+					border-color: #fff;
+				}
+			}
 		}
+	}
+
+	&__burger {
+		display: none;
+	}
+}
+
+// Бургер
+
+.ham {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.hamRotate.active {
+	transform: rotate(45deg);
+}
+.hamRotate180.active {
+	transform: rotate(180deg);
+}
+.line {
+	fill: none;
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+	stroke: #fff;
+	stroke-width: 3.5;
+	stroke-linecap: round;
+}
+
+.ham8 .top {
+	stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+	stroke-dasharray: 40 142;
+	transform-origin: 50%;
+	transition: transform 400ms;
+}
+.ham8 .bottom {
+	stroke-dasharray: 40 85;
+	transform-origin: 50%;
+	transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+	stroke-dashoffset: -64px;
+}
+.ham8.active .middle {
+	//stroke-dashoffset: -20px;
+	transform: rotate(90deg);
+}
+.ham8.active .bottom {
+	stroke-dashoffset: -64px;
+}
+
+@media (max-width: 1170px) {
+	.header {
+		&__menu {
+			margin-right: 15px;
+		}
+
+		&__phone {
+			& a {
+				font-size: 14px;
+			}
+		}
+
+		&__logo {
+			& img {
+				max-width: 150px;
+			}
+		} 
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		&__wrap {
+			padding: 10px 0;
+		}
+
+		&__menu {
+			display: none;
+		}
+
+		&__burger {
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.header {
+		&__logo {
+			& img {
+				max-width: 100px;
+			}
+		}
+
+		&__phone {
+			& a {
+				font-size: 12px;
+				padding-left: 25px;
+				&::before {
+					width: 19px;
+					height: 19px;
+				}
+			}
+		}
+
+		&__burger {
+			width: 35px;
+			height: 35px;
+		}
+	}
+}
+
+.mm-panel {
+	background: #212121;
+}
+
+.mm-btn_next:after {
+	border-color: #ffffff;
+}
+
+.mm-navbar_sticky .mm-navbar__title {
+	padding: 10px;
+	background: #212121;
+	color: #ffffff !important;
+}
+
+.mm-listitem__text {
+	color: #fff !important;
+}
+
+.mm-listitem:after {
+	left: 0 !important;
+	border-color: #fff !important;
+}
+
+.mm-navbar__btn:not(.mm-hidden) + .mm-navbar__title {
+	padding-left: 10px !important;
+}
+
+.mm-navbar__btn {
+	background: #212121;
+	border-color: #fff !important;
+}
+
+.mm-btn_prev:before {
+	border-color: #ffffff !important;
+}
+
+.mm-navbar__title {
+	& img {
+		max-width: 150px;
 	}
 }

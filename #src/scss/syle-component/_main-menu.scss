@@ -21,8 +21,13 @@
 	}
 
 	&__link {
-		font-size: 20px;
+		font-size: 16px;
 		color: #fff;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s ease;
+		&:not(.mm-listitem__text):hover {
+			border-color: #fff;
+		}
 	}
 
 	&__submenu {
@@ -60,6 +65,20 @@
 				opacity: 1;
 				visibility: visible;
 			}
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.main-nav {
+		&__item {
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+
+		&__link {
+			font-size: 14px;
 		}
 	}
 }

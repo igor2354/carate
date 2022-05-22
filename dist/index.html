@@ -3,11 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/mmenu.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Document</title>
 	</head>
 
 	<body>
+
+		<nav id="menu" class="mm-menu_offcanvas">
+			<ul>
+		
+			</ul>
+		</nav>
+
+
 		<div class="wrapper">
 			<!-- HEADER -->
 
@@ -20,29 +29,37 @@
 
 						<div class="header__group">
 							<nav class="header__menu main-nav">
-	<ul class="main-nav__list">
+	<ul class="main-nav__list js-mobile-menu">
 		<li class="main-nav__item hover-item">
-			<a href="#" class="main-nav__link">О школе</a>
+			<a href="#info-school" class="main-nav__link js-anchor">О школе</a>
 		</li>
 
 		<li class="main-nav__item hover-item">
-			<a href="#" class="main-nav__link">Тренеры</a>
+			<a href="#coach" class="main-nav__link js-anchor">Тренеры</a>
 		</li>
 
 		<li class="main-nav__item hover-item">
-			<a href="#" class="main-nav__link">Процесс обучения</a>
+			<a href="#training" class="main-nav__link js-anchor">Процесс обучения</a>
 		</li>
 
 		<li class="main-nav__item hover-item">
-			<a href="#" class="main-nav__link">Контакты</a>
+			<a href="#order" class="main-nav__link js-anchor">Контакты</a>
 		</li>
 	</ul>
 </nav>
 
 
 							<div class="header__phone">
-								<a href="tel:+7800553535">+7 800-55-35-35</a>
+								<a href="tel:+7800553535"><span>+7 800-55-35-35</span></a>
 							</div>
+
+							<svg class="header__burger ham hamRotate ham8 js-ham" viewBox="0 0 100 100" height="50" width="50">
+								<path class="line top"
+								  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+								<path class="line middle" d="m 30,50 h 40" />
+								<path class="line bottom"
+								  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+							  </svg>
 						</div>
 					</div>
 				</div>
@@ -50,6 +67,8 @@
 
 			<!-- // HEADER -->
 
+
+<main class="main">
 
 <section class="main-screen">
 	<div class="container">
@@ -68,7 +87,7 @@
 	</div>
 </section>
 
-<section class="info-school">
+<section class="info-school" id="info-school">
 	<div class="container">
 		<div class="info-school__wrap">
 			<div class="info-school__row">
@@ -196,7 +215,7 @@
 	</div>
 </section>
 
-<section class="coach">
+<section class="coach" id="coach">
 	<div class="container">
 		<div class="coach__wrap">
 			<div class="coach__title title-h2"><span>Наш тренер</span></div>
@@ -226,7 +245,7 @@
 	</div>
 </section>
 
-<section class="training">
+<section class="training" id="training">
 	<div class="container">
 		<div class="training__wrap">
 			<div class="training__title title-h2"><span>ПРОЦЕСС ОБУЧЕНИЯ</span></div>
@@ -344,7 +363,7 @@
 	</div>
 </section>
 
-<section class="order">
+<section class="order" id="order">
 	<div class="container">
 		<div class="order__wrap">
 			<form class="order__form from-order">
@@ -380,17 +399,18 @@
 </section>
 
 <section class="map">
-	<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A738ad0276e6a571b831c44a39dedcf01959a0b21856b66644a159ad1005012e9&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
-	<div class="container">
-		<div class="map__wrap">
-			<div class="map__block">
-				<div class="map__title title-h2">МЫ НА КАРТЕ</div>
-				<div class="map__text">Школа карате. Профессиональное обучение для всех желающих</div>
-				<div class="map__adress">+ 7 (8352) 222 33 33, Брянск, улица Ульянова, 4</div>
-			</div>
+	<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A738ad0276e6a571b831c44a39dedcf01959a0b21856b66644a159ad1005012e9&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>	
+
+	<div class="map__wrap">
+		<div class="map__block">
+			<div class="map__title title-h2">МЫ НА КАРТЕ</div>
+			<div class="map__text">Школа карате. Профессиональное обучение для всех желающих</div>
+			<div class="map__adress"><a href="tel: + 7 (8352) 222 33 33"> + 7 (8352) 222 33 33</a>, Брянск, улица Ульянова, 4</div>
 		</div>
 	</div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 
@@ -411,7 +431,7 @@
 
           <div class="footer__column">
             <div class="footer__phone">
-              <a href="#">+7 800-55-35-35</a>
+              <a href="#"><span>+7 800-55-35-35</span></a>
             </div>
             <div class="footer__sign">Звонок по России бесплатный</div>
             <div class="footer__social">
@@ -433,6 +453,7 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
 integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="./js/mmenu.js"></script>
 <script src="./js/script.js"></script>
 </body>
 
