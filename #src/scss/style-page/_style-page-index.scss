@@ -1,6 +1,6 @@
 .main-screen {
 	position: relative;
-	background: url("../img/image-bg-main-screen.jpg") no-repeat center / cover;
+	
 
 	&::before {
 		content: "";
@@ -122,6 +122,9 @@
 
 		&__title {
 			margin-bottom: 20px;
+			& span {
+				justify-content: center;
+			}
 		}
 	}
 }
@@ -660,7 +663,6 @@
 }
 
 .order {
-	background: url("../img/image-bg-main-screen.jpg") no-repeat center / cover;
 
 	&__wrap {
 		padding: 80px 0;

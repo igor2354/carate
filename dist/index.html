@@ -10,7 +10,7 @@
 
 	<body>
 
-		<nav id="menu" class="mm-menu_offcanvas">
+		<nav id="menu" class="mobile-menu">
 			<ul>
 		
 			</ul>
@@ -70,7 +70,7 @@
 
 <main class="main">
 
-<section class="main-screen">
+<section class="main-screen" style="background: url(../img/image-bg-main-screen.jpg) no-repeat center / cover;">
 	<div class="container">
 		<div class="main-screen__wrap">
 			<div class="main-screen__subtitle">школа карате</div>
@@ -80,7 +80,7 @@
 			<div class="main-screen__text">Профессиональное обучение карате для всех желающих. Запишитесь прямо сейчас – и обучайтесь у лучших тренеров!</div>
 
 			<div class="main-screen__group">
-				<a href="#" class="main-screen__btn main-btn">Записаться сейчас</a>
+				<a href="#popup-order" data-popup="popup-order" class="main-screen__btn main-btn js-modal-show">Записаться сейчас</a>
 				<div class="main-screen__subtext">Запишись на пробную тренировку</div>
 			</div>
 		</div>
@@ -363,7 +363,7 @@
 	</div>
 </section>
 
-<section class="order" id="order">
+<section class="order" id="order" style="background: url(../img/image-bg-main-screen.jpg) no-repeat center / cover;">
 	<div class="container">
 		<div class="order__wrap">
 			<form class="order__form from-order">
@@ -375,10 +375,10 @@
 					<div class="from-order__wrap-input wrap-input">
 						<input type="text" placeholder="Ваше имя">
 					</div>
-
+<!-- 
 					<div class="from-order__wrap-input wrap-input">
 						<input type="text" placeholder="E-mail">
-					</div>
+					</div> -->
 
 					<div class="from-order__wrap-input wrap-input">
 						<input type="tel" placeholder="+7999-99-99-99">
@@ -446,6 +446,50 @@
     </div>
   </div>
 </footer>
+
+<div class="popup-general modal --order" id="popup-order">
+
+  <div class="popup-general__scroll">
+
+    <div class="popup-general__popup-wrap">
+
+      <div class="popup-general__body">
+
+        <div class="popup-general__close js-modal-close"></div>
+
+        <div class="popup-general__wrap">
+          <form class="popup-general__form from-popup-order">
+            <div class="from-popup-order__title title-h2">Запишитесь на тренировку</div>
+    
+            <div class="from-popup-order__subtitle">Мы свяжемся с вами, выберем тренера и тип занятий, назначим тренировку в удобное для вас время.</div>
+    
+            <div class="from-popup-order__list">
+              <div class="from-popup-order__wrap-input wrap-input">
+                <input type="text" placeholder="Ваше имя">
+              </div>
+    
+              <div class="from-popup-order__wrap-input wrap-input">
+                <input type="tel" placeholder="+7999-99-99-99">
+              </div>
+            </div>
+    
+            <label class="from-popup-order__check wrap-check">
+              <input type="checkbox" class="wrap-check__input">
+              <div class="wrap-check__checkmark"></div>
+              <div class="wrap-check__text">Я принимаю <a href="#">политику</a>.</div>
+            </label>
+    
+            <button type="submit" class="from-popup-order__btn main-btn">Отправить</button>
+    
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
 <!-- // FOOTER -->
 
